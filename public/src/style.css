@@ -1,5 +1,41 @@
+:root{
+    --button_size: 100px;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button{
+    all: unset;
+    text-align: center;
+}
+
+button:hover:not([data-type=""]){
+    cursor: pointer;
+    font-size: 50pt;
+    background: #faf
+}
+
+.buttongrid{
+    background: #ccc;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(3, var(--button_size));
+    grid-template-rows: repeat(2, var(--button_size));
+    gap: 5px;
+    align-content: center;
+    justify-content: center;
+}
+
+.direction{
+    background: #f0f;
+    font-size: 42pt;
+}
+
+.direction[data-type=""]{
+    background: none;
 }
